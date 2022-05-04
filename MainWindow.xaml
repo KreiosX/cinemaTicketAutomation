@@ -1,0 +1,115 @@
+﻿<Window x:Class="AsilCinemaTicketAutomation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AsilCinemaTicketAutomation"
+        mc:Ignorable="d"
+        Title="Main Menu"  Height="614.4" Width="1092.8" WindowStartupLocation="CenterScreen" Name="mw" ResizeMode="NoResize" Icon="Resources/asiltckt.ico">
+
+    <Window.Background>
+        <ImageBrush ImageSource="Resources/asil2.png"></ImageBrush>
+    </Window.Background>
+    <Grid>
+        <Button BorderBrush="White" BorderThickness="1" Click="feedback_Click" Name="feedback" Margin="0,540,1005,0" Height="20" Background="Transparent" Content="Feedback" Foreground="White" Width="70">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Image Name="abtus" Visibility="Collapsed" Source="Resources\about-us.png"></Image>
+        <Button Name="txtsc" MouseLeave="txtScrolling_MouseLeave" MouseEnter="txtScrolling_MouseEnter" Margin="1005,540,0,0" Content="About Us" Background="Transparent" Foreground="White" BorderBrush="White" BorderThickness="1" Height="20">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBox BorderBrush="White" BorderThickness="3" Visibility="Collapsed" IsEnabled="False" TextAlignment="Center" Foreground="White" Background="Black" Name="txtScrolling" VerticalAlignment="Center" HorizontalAlignment="Center" Width="auto" Height="auto">
+            <TextBox.RenderTransform>
+                <TranslateTransform x:Name="translate" />
+            </TextBox.RenderTransform>
+            <TextBox.Triggers>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard RepeatBehavior="Forever">
+                            <DoubleAnimation
+                        From="-450" To="450"
+                        Storyboard.TargetName="translate"
+                        Storyboard.TargetProperty="Y"
+                        Duration="0:0:20" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBox.Triggers>
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="50"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBlock Visibility="Hidden" TextWrapping="WrapWithOverflow" TextAlignment="Center" Name="userinformationz" Background="Transparent" Margin="5" Width="70" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White"></TextBlock>
+        <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center" Name="userinformation" Background="Transparent" Margin="5" Width="auto" Height="auto" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White"></TextBlock>
+        <TextBlock TextAlignment="Center" Foreground="White" Name="date1" Background="Transparent" Margin="0,5,10,0" Width="auto" Height="auto" VerticalAlignment="Top" HorizontalAlignment="Right" ToolTip="Date Format DD/MM/YYYY"/>
+        <Menu Background="Transparent" HorizontalAlignment="Center" Width="auto" Height="25" VerticalAlignment="Top" IsMainMenu="True"  FontSize="14" BorderThickness="0.5" BorderBrush="LightGray" Foreground="White">
+            <MenuItem Click="frag_Click" Name="frag" Background="Transparent" Height="25" Header="Home" Foreground="White">
+                <MenuItem.Icon>
+                    <Image Source="Resources\homepage.png"></Image>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Name="TTransaction" Background="Transparent" Height="25" Header="Ticket Transactions" Foreground="White">
+                <MenuItem.Icon>
+                    <Image Source="Resources\icon_ticket.png"></Image>
+                </MenuItem.Icon>
+                <MenuItem Click="cutticket_Click" Name="cutticket" Header="Cut Ticket" Foreground="White" Background="SlateGray">
+                    <MenuItem.Icon>
+                        <Image Source="Resources\cuttckpng.png"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Click="ticketcancellation_Click" Name="ticketcancellation" Foreground="White" Background="SlateGray"  Header="_Ticket Cancellation and Reservations">
+                    <MenuItem.Icon>
+                        <Image Source="Resources\tcar.png"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Name="MProfile" Background="Transparent" Click="myprofile_Click" Height="25" Header="My Profile" Foreground="White">
+                <MenuItem.Icon>
+                    <Image Source="Resources\user.png"></Image>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Background="Transparent" Name="ETVision" Click="enterthevision_Click" Height="25" Header="Enter The Vision" Foreground="White">
+                <MenuItem.Icon>
+                    <Image Source="Resources\vizyon-misyon.png"></Image>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Background="Transparent" Name="FOperations" Click="filmoperations_Click" Height="25" Header="Film Operations" Foreground="White">
+                <MenuItem.Icon>
+                    <Image Source="Resources\cpb.png"></Image>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Background="Transparent" Name="ATransactions" Click="authorization_Click" Height="25" Header="Authorization Transactions" Foreground="White">
+                <MenuItem.Icon>
+                    <Image Source="Resources\egm.png"></Image>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Background="Transparent" Name="EditSeatz" Header="Edit Seats" Foreground="White" Click="EditSeatz_Click">
+                <MenuItem.Icon>
+                    <Image Source="Resources\edittpng.png"></Image>
+                </MenuItem.Icon>
+            </MenuItem>
+        </Menu>
+        <StackPanel Width="auto" Height="auto" Name="mainprocess" Margin="0,25,0,0">
+            <WrapPanel Name="fragp" VerticalAlignment="Center" HorizontalAlignment="Center" Width="800">
+                <MediaElement LoadedBehavior="Manual" Cursor="None" MediaEnded="myMediaElement_MediaEnded" Volume="0" MouseEnter="myMediaElement_MouseEnter" MouseLeave="myMediaElement_MouseLeave" Opacity="0.9" Visibility="Visible" Margin="0,35,0,0" Name="myMediaElement" Width="400" Height ="200">
+                </MediaElement>
+                <MediaElement LoadedBehavior="Manual" Cursor="None" MediaEnded="myMediaElement1_MediaEnded" Volume="0" MouseEnter="myMediaElement1_MouseEnter" MouseLeave="myMediaElement1_MouseLeave" Opacity="0.9" Visibility="Visible" Margin="0,35,0,0" Name="myMediaElement1" Width="400" Height ="200">
+                </MediaElement>
+                <MediaElement LoadedBehavior="Manual" Cursor="None" MediaEnded="myMediaElement2_MediaEnded" Volume="0" MouseEnter="myMediaElement2_MouseEnter" MouseLeave="myMediaElement2_MouseLeave" Opacity="0.9" Visibility="Visible" Margin="0,35,0,0" Name="myMediaElement2" Width="400" Height ="200">
+                </MediaElement>
+                <MediaElement LoadedBehavior="Manual" Cursor="None" MediaEnded="myMediaElement3_MediaEnded" Volume="0" MouseEnter="myMediaElement3_MouseEnter" MouseLeave="myMediaElement3_MouseLeave" Opacity="0.9" Visibility="Visible" Margin="0,35,0,0" Name="myMediaElement3" Width="400" Height ="200">
+                </MediaElement>
+            </WrapPanel>
+        </StackPanel>
+    </Grid>
+</Window>

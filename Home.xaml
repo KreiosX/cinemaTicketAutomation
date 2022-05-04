@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="AsilCinemaTicketAutomation.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AsilCinemaTicketAutomation"
+             mc:Ignorable="d" 
+             d:DesignHeight="564.4" d:DesignWidth="1092.8">
+    <Grid>
+        <WrapPanel Name="fragp" VerticalAlignment="Center" HorizontalAlignment="Center" Width="800">
+            <MediaElement LoadedBehavior="Manual" Cursor="None" MediaEnded="myMediaElement_MediaEnded" Volume="0" MouseEnter="myMediaElement_MouseEnter" MouseLeave="myMediaElement_MouseLeave" Opacity="0.9" Visibility="Visible" Margin="0,35,0,0" Name="myMediaElement" Width="400" Height ="200">
+            </MediaElement>
+            <MediaElement LoadedBehavior="Manual" Cursor="None" MediaEnded="myMediaElement1_MediaEnded" Volume="0" MouseEnter="myMediaElement1_MouseEnter" MouseLeave="myMediaElement1_MouseLeave" Opacity="0.9" Visibility="Visible" Margin="0,35,0,0" Name="myMediaElement1" Width="400" Height ="200">
+            </MediaElement>
+            <MediaElement LoadedBehavior="Manual" Cursor="None" MediaEnded="myMediaElement2_MediaEnded" Volume="0" MouseEnter="myMediaElement2_MouseEnter" MouseLeave="myMediaElement2_MouseLeave" Opacity="0.9" Visibility="Visible" Margin="0,35,0,0" Name="myMediaElement2" Width="400" Height ="200">
+            </MediaElement>
+            <MediaElement LoadedBehavior="Manual" Cursor="None" MediaEnded="myMediaElement3_MediaEnded" Volume="0" MouseEnter="myMediaElement3_MouseEnter" MouseLeave="myMediaElement3_MouseLeave" Opacity="0.9" Visibility="Visible" Margin="0,35,0,0" Name="myMediaElement3" Width="400" Height ="200">
+            </MediaElement>
+        </WrapPanel>
+    </Grid>
+</UserControl>

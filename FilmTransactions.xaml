@@ -1,0 +1,108 @@
+﻿<UserControl x:Class="AsilCinemaTicketAutomation.FilmTransactions"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AsilCinemaTicketAutomation"
+             mc:Ignorable="d" 
+             d:DesignHeight="564.4" d:DesignWidth="1092.8">
+    <Grid>
+        <GroupBox Name="insfilm" Header="Insert Film" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Center" Width="250" Height="auto" Margin="0,0,125,0">
+            <StackPanel>
+                <Label Content="Movie Name" Foreground="White" HorizontalContentAlignment="Center"></Label>
+                <TextBox Background="Transparent" Foreground="White" Name="mname" Width="100"></TextBox>
+                <Label Content="Movie Description" Foreground="White" HorizontalContentAlignment="Center"></Label>
+                <TextBox Background="Transparent" Foreground="White" Name="minfo" Width="100"></TextBox>
+                <Label Content="Movie Time(Minute)" Foreground="White" HorizontalContentAlignment="Center"></Label>
+                <TextBox Background="Transparent" Foreground="White" Name="mtime" Width="100"></TextBox>
+                <Label Content="Ticket Price" Foreground="White" HorizontalContentAlignment="Center"></Label>
+                <WrapPanel>
+                    <Label Margin="50,0,0,0" Content="Full" Foreground="White"></Label>
+                    <Label Margin="50,0,0,0" Content="Student" Foreground="White"></Label>
+                </WrapPanel>
+                <WrapPanel>
+                    <TextBox Background="Transparent" Foreground="White" Name="mpf" Margin="35,0,0,0" Width="60"></TextBox>
+                    <TextBox Name="mps" Margin="35,0,0,0" Width="60" Background="Transparent" Foreground="White"></TextBox>
+                </WrapPanel>
+                <WrapPanel>
+                    <CheckBox Content="Movie Is Three-Dimensional?" Foreground="White" Margin="35,0,0,0" Name="mis3d"></CheckBox>
+                </WrapPanel>
+
+                <Image Stretch="Fill" ToolTip="Only JPG and JPEG Format Photos." Name="ifphoto" Width="150" Height="90" Margin="0,5,0,5"></Image>
+                <Button ToolTip="Only JPG Format Photos..!" Name="sbanner" Width="175" Height="20" Content="Select Banner" Foreground="White" Background="Transparent" Click="sbanner_Click"></Button>
+                <Label Content="Movie Type" HorizontalContentAlignment="Center" Foreground="White"></Label>
+                <ComboBox Name="smt" ItemsSource="{Binding}" Width="100"></ComboBox>
+                <Label Content="Vision Entry / Exit Date" Foreground="White" HorizontalContentAlignment="Center"></Label>
+                <WrapPanel>
+                    <DatePicker Name="ev" Width="100" Margin="15,0,0,0"></DatePicker>
+                    <DatePicker Name="ov" Width="100" Margin="15,0,0,0"></DatePicker>
+                </WrapPanel>
+                <Button Name="AddF" Height="20" Width="100" Foreground="White" Background="Transparent" Content="Add Film" Click="AddF_Click"></Button>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Name="inssaloon" Header="Insert Saloon" Foreground="White" Width="150" HorizontalAlignment="Left" Height="225" VerticalAlignment="Top" Margin="0,25,0,0">
+            <StackPanel>
+                <Label Margin="10" Content="Enter Saloon Name" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left"></Label>
+                <TextBox Background="Transparent" Foreground="White" Name="isaloon" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Left" Width="90"></TextBox>
+                <Label Margin="10" Foreground="White" Content="Seat In The Hill" VerticalAlignment="Top" HorizontalAlignment="Left"></Label>
+                <TextBox Background="Transparent" Foreground="White" Name="iseat" Margin="10" Width="90" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBox>
+                <Button Background="Transparent" Foreground="White" Name="CSaloon" Margin="10" Content="Create Saloon" Click="CSaloon_Click" Width="90" VerticalAlignment="Top" HorizontalAlignment="Left"></Button>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Name="inssession" Header="Insert Session" Foreground="White" Width="150" HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Margin="175,0,0,0">
+            <StackPanel>
+                <Label Content="Lounge To  Add" HorizontalContentAlignment="Center" Foreground="White"></Label>
+                <ComboBox Margin="10,0,0,0" HorizontalAlignment="Left" Name="ss" Width="100" ItemsSource="{Binding}"></ComboBox>
+                <Label Content="Select Session Date" HorizontalContentAlignment="Center" Foreground="White"></Label>
+                <DatePicker Name="getsesdate" HorizontalAlignment="Left" Margin="10,0,0,0" Width="100" CalendarClosed="getsesdate_CalendarClosed"></DatePicker>
+                <Label Margin="5" Content="Enter Session Time" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left"></Label>
+                <TextBox Background="Transparent" Foreground="White" MaxLength="5" Name="ESTime" Margin="5" Width="90" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBox>
+                <Label Margin="5" Foreground="White" Content="Assigned Film"></Label>
+                <ComboBox ItemsSource="{Binding}" Name="ssfilm" Width="100" Margin="5"></ComboBox>
+                <Button Background="Transparent" Foreground="White" Name="CSession" Margin="5" Content="Create Session" Click="CSession_Click" Width="90" VerticalAlignment="Top" HorizontalAlignment="Left"></Button>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Name="updordelsession" Header="Delete Session" Foreground="White" Width="160" HorizontalAlignment="Left" Height="250" VerticalAlignment="Top" Margin="175,300,0,0">
+            <StackPanel>
+                <Label Content="Select Date" Foreground="White" HorizontalAlignment="Left" Margin="5"></Label>
+                <DatePicker CalendarClosed="sdate_CalendarClosed" Name="sdate" Width="100" HorizontalAlignment="Left" Margin="5"></DatePicker>
+                <Label Margin="5" Content="Select Saloon" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left"></Label>
+                <ComboBox DropDownClosed="SSal_DropDownClosed" Name="SSal" Margin="5" Width="90" VerticalAlignment="Top" HorizontalAlignment="Left" ItemsSource="{Binding}"></ComboBox>
+                <Label Margin="5" Content="Select Session" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left"></Label>
+                <ComboBox Name="USessionCB" Margin="5" Width="90" VerticalAlignment="Top" HorizontalAlignment="Left" ItemsSource="{Binding}"></ComboBox>
+                <WrapPanel>
+                    <Button Name="DSession" Width="90" Height="20" Margin="25,0,0,0" Foreground="White" Background="Transparent" Content="Delete" Click="DSession_Click">
+                    </Button>
+                </WrapPanel>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Name="updordelsaloon" Header="Delete Saloon" Foreground="White" Width="150" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Margin="0,250,0,0">
+            <StackPanel>
+                <Label Margin="10" Content="Select Salon" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left"></Label>
+                <ComboBox Margin="10" Width="90" VerticalAlignment="Top" HorizontalAlignment="Left" ItemsSource="{Binding}" Name="SSaloon"></ComboBox>
+                <WrapPanel>
+                    <Button HorizontalAlignment="Center" VerticalAlignment="Center" Name="DSaloon" Width="90" Height="20" Margin="25,0,0,0" Foreground="White" Background="Transparent" Content="Delete" Click="DSaloon_Click"></Button>
+                </WrapPanel>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Name="updetvision" Header="Update Enter The Vision" Foreground="White" Margin="0,0,250,0" Width="200" Height="400" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <StackPanel HorizontalAlignment="Center" Width="auto" Height="375" VerticalAlignment="Top">
+                <ComboBox Width="150" SelectionChanged="ETVisions_SelectionChanged" ItemsSource="{Binding}" Name="ETVisions">
+                </ComboBox>
+                <Image Stretch="Fill" ToolTip="Only JPG and JPEG Format Photos." Name="upphoto" Width="150" Height="250"  VerticalAlignment="Top" Margin="5,10,5,10"></Image>
+                <Button ToolTip="Only JPG Format Photos..!" Width="auto" Background="Transparent" Height="20" VerticalAlignment="Center" Content="Upload" Foreground="White" Click="Button_Click"></Button>
+                <Button Background="Transparent" Height="25" Margin="10" Content="Upload Photo From FTP Server" Foreground="White" Name="upfftps" Click="upfftps_Click"></Button>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Name="homefrag" Header="Update Home Fragman's" Foreground="White" Margin="0,0,25,0" Width="200" Height="auto" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <StackPanel HorizontalAlignment="Center" Width="auto" Height="275" VerticalAlignment="Top">
+                <ComboBox DropDownClosed="fra_DropDownClosed" Width="150" ItemsSource="{Binding}" Name="fra">
+                </ComboBox>
+                <MediaElement LoadedBehavior="Manual" Opacity="0.9" Visibility="Visible" Margin="0,25,0,25" Name="myMediaElement" Width="auto" Height ="auto">
+                </MediaElement>
+                <Button ToolTip="Only MP4 Format Videos..!" Width="auto" Background="Transparent" Height="20" VerticalAlignment="Center" Content="Upload" Foreground="White" Name="fragup" Click="fragup_Click"></Button>
+                <Button Background="Transparent" Height="25" Margin="10" Content="Upload Video From FTP Server" Foreground="White" Name="umf" Click="umf_Click"></Button>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</UserControl>

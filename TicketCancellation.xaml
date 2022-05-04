@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="AsilCinemaTicketAutomation.TicketCancellation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AsilCinemaTicketAutomation"
+             mc:Ignorable="d" 
+                          d:DesignHeight="564.4" d:DesignWidth="1092.8">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="auto" Grid.Column="0" Margin="0,50,0,0">
+            <TextBlock Text="If You Enter The Cancellation Code, You Don't Need To Select The Date And Session" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" Width="150" Height="80" Background="Transparent" Foreground="White" Name="rcanc"></TextBlock>
+            <Label Width="300" Content="Enter Your Cancellation Code Or Citizenship Number" Foreground="White"></Label>
+            <TextBox Foreground="White" Background="Transparent" BorderThickness="1" BorderBrush="LightGray" Name="cticket" Margin="5" Width="100" Height="20"></TextBox>
+            <Label HorizontalAlignment="Center" Foreground="White" Content="Select Movie Date"></Label>
+            <DatePicker Name="cancdate" Width="100" Margin="5"></DatePicker>
+            <Label HorizontalAlignment="Center" Foreground="White" Content="Enter Movie Session"></Label>
+            <TextBox Background="Transparent" Foreground="White" ToolTip="Sample: 12:00" Name="cancses" Width="100" Height="20" Margin="5"></TextBox>
+            <Button Margin="5" Width="100" Height="20" Background="Transparent" Content="Cancel Ticket" Foreground="White" Click="Button_Click"></Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="0,75,0,0">
+            <TextBlock Text="If You Enter The Reservation Code, You Don't Need To Select The Date And Session" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center" Width="150" Height="80" Background="Transparent" Foreground="White" Name="rcanc0"></TextBlock>
+            <TextBlock Text="Enter Citizenship Number or Reservation Code" Foreground="White" HorizontalAlignment="Center"></TextBlock>
+            <TextBox Name="RCNumberG" Width="100" Background="Transparent" Foreground="White"></TextBox>
+            <TextBlock Text="Select Reservation Date" HorizontalAlignment="Center" Foreground="White"></TextBlock>
+            <DatePicker Name="RDate" Width="100"></DatePicker>
+            <TextBlock HorizontalAlignment="Center" Text="Enter Reservation Time" Foreground="White"></TextBlock>
+            <TextBox Name="RSessionTime" Background="Transparent" Foreground="White" Width="100"></TextBox>
+            <Button Name="SearchReserv" Click="SearchReserv_Click" Width="100" Height="20" Background="Transparent" Foreground="White" Content="Search" Margin="10"></Button>
+            <WrapPanel>
+                <TextBlock IsEnabled="False" Margin="185,0,0,0" Text="Name" Background="Transparent" Foreground="White"></TextBlock>
+                <TextBlock IsEnabled="False" Margin="90,0,0,0" Text="Surname" Background="Transparent" Foreground="White"></TextBlock>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBox Margin="155,0,0,0" Background="Transparent" Foreground="White" IsEnabled="False" Width="100" Name="rname"></TextBox>
+                <TextBox Margin="25,0,0,0" Background="Transparent" Foreground="White" IsEnabled="False" Width="100" Name="rsurname"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Margin="215,0,0,0" Text="Account" Foreground="White" Background="Transparent"></TextBlock>
+                <TextBlock Margin="10,0,0,0" Width="20" Name="RAccount" Foreground="White" Background="Transparent"></TextBlock>
+                <TextBlock Text="$" Foreground="White" Background="Transparent"></TextBlock>
+            </WrapPanel>
+            <Button Width="100" Background="Transparent" Foreground="White" Height="20" Content="Buy" Name="RBuy" Click="RBuy_Click"></Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

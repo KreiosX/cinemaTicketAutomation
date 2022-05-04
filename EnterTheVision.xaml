@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="AsilCinemaTicketAutomation.EnterTheVision"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AsilCinemaTicketAutomation"
+             mc:Ignorable="d" 
+             d:DesignHeight="564.4" d:DesignWidth="1092.8">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Name="st2" Margin="0,10,0,0" Grid.Row="0">
+            <CheckBox Name="e1" Tag="1" Content="1" Margin="5" Foreground="White"></CheckBox>
+            <CheckBox Name="e2" Tag="2" Content="2" Margin="5" Foreground="White"></CheckBox>
+            <CheckBox Name="e3" Tag="3" Content="3" Margin="5" Foreground="White"></CheckBox>
+            <CheckBox Name="e4" Tag="4" Content="4" Margin="5" Foreground="White"></CheckBox>
+            <CheckBox Name="e5" Tag="5" Content="5" Margin="5" Foreground="White"></CheckBox>
+            <CheckBox Name="e6" Tag="6" Content="6" Margin="5" Foreground="White"></CheckBox>
+            <CheckBox Name="e7" Tag="7" Content="7" Margin="5" Foreground="White"></CheckBox>
+            <CheckBox Name="e8" Tag="8" Content="8" Margin="5" Foreground="White"></CheckBox>
+            <CheckBox Name="e9" Tag="9" Content="9" Margin="5" Foreground="White"></CheckBox>
+            <CheckBox Name="e10" Tag="10" Content="10" Margin="5" Foreground="White"></CheckBox>
+            <CheckBox Name="e11" Tag="11" Content="11" Margin="5" Foreground="White"></CheckBox>
+            <CheckBox Name="e12" Tag="12" Content="12" Margin="5" Foreground="White"></CheckBox>
+        </StackPanel>
+        <WrapPanel Name="etv1" Grid.Row="0" Height="auto" Margin="15,0,0,2" Width="auto" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <Rectangle Name="m1" Fill="SlateBlue" RadiusX="25" RadiusY="25" Grid.Row="0" Margin="20" Width="130" Height="220"/>
+            <Rectangle Name="m2" Fill="SlateBlue" RadiusX="25" RadiusY="25" Grid.Row="0" Margin="20" Width="130" Height="220"/>
+            <Rectangle Name="m3" Fill="SlateBlue" RadiusX="25" RadiusY="25" Grid.Row="0" Margin="20" Width="130" Height="220"/>
+            <Rectangle Name="m4" Fill="SlateBlue" RadiusX="25" RadiusY="25" Grid.Row="0" Margin="20" Width="130" Height="220"/>
+            <Rectangle Name="m5" Fill="SlateBlue" RadiusX="25" RadiusY="25" Grid.Row="0" Margin="20" Width="130" Height="220"/>
+            <Rectangle Name="m6" Fill="SlateBlue" RadiusX="25" RadiusY="25" Grid.Row="0" Margin="20" Width="130" Height="220"/>
+        </WrapPanel>
+        <StackPanel Name="st3" Grid.Row="1">
+            <Button Name="SETVVisiblity" Width="40" Height="20" HorizontalAlignment="Left" Margin="0,10,0,0" Background="Transparent" Content="Save" Foreground="White" Click="SETVVisiblity_Click"></Button>
+        </StackPanel>
+        <WrapPanel Name="etv2" Grid.Row="1" Grid.RowSpan="2" Height="auto" Margin="15,0,0,20" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="auto">
+            <Rectangle Name="m7" Fill="SlateBlue" RadiusX="25" RadiusY="25" Grid.Row="0" Margin="20,0,20,20" Width="130" Height="220"/>
+            <Rectangle Name="m8" Fill="SlateBlue" RadiusX="25" RadiusY="25" Grid.Row="0" Margin="20,0,20,20" Width="130" Height="220"/>
+            <Rectangle Name="m9" Fill="SlateBlue" RadiusX="25" RadiusY="25" Grid.Row="0" Margin="20,0,20,20" Width="130" Height="220"/>
+            <Rectangle Name="m10" Fill="SlateBlue" RadiusX="25" RadiusY="25" Grid.Row="0" Margin="20,0,20,20" Width="130" Height="220"/>
+            <Rectangle Name="m11" Fill="SlateBlue" RadiusX="25" RadiusY="25" Grid.Row="0" Margin="20,0,20,20" Width="130" Height="220"/>
+            <Rectangle Name="m12" Fill="SlateBlue" RadiusX="25" RadiusY="25" Grid.Row="0" Margin="20,0,20,20" Width="130" Height="220"/>
+        </WrapPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,122 @@
+﻿<UserControl x:Class="AsilCinemaTicketAutomation.CutTicket"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AsilCinemaTicketAutomation"
+             mc:Ignorable="d" 
+             d:DesignHeight="564.4" d:DesignWidth="1092.8" >
+    <Grid>
+        <TextBlock Visibility="Collapsed" Name="cinf" FontSize="16" Margin="50,150,750,300" Text="If The Reservation Isn't Approved Or Canceled 3 Hours Before The Start Of The Movie, Your Reservation Will Be Automatically Canceled ..!" TextWrapping="Wrap"></TextBlock>
+        <TextBlock Width="400" Height="25" VerticalAlignment="Top" Margin="0,5,350,0" Name="mi3d" Foreground="White"></TextBlock>
+        <GroupBox Name="seats" VerticalAlignment="Top" HorizontalAlignment="Center" Width="612" Header="Seats" Foreground="White" Background="Transparent" Height="auto" Margin="0,20,443,0">
+            <WrapPanel Name="a" Width="auto" HorizontalAlignment="Center" Height="auto" VerticalAlignment="Center">
+            </WrapPanel>
+        </GroupBox>
+        <TextBlock Name="a3" Width="120" Height="20" VerticalAlignment="Top" Margin="295,25,0,0" Text="OOS = Out Of Service" Foreground="White"></TextBlock>
+        <GroupBox Name="a2" Header="Seat States" Foreground="White" Margin="35,470,400,40">
+            <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Label VerticalAlignment="Center" Foreground="White" Content="Selected Seat: "></Label>
+                <TextBlock Text="0" Name="selectedseat" TextAlignment="Center" Foreground="Black" Background="Wheat" Width="40" Height="22" Margin="0,5,30,0"></TextBlock>
+                <Label VerticalAlignment="Center" Foreground="White" Content="Empty Seat:"></Label>
+                <TextBlock Text="0" Name="eseats" TextAlignment="Center" Foreground="Black" Background="LightGreen" Width="40" Height="22" Margin="0,5,30,0"></TextBlock>
+                <Label VerticalAlignment="Center" Foreground="White" Content="Full Seat:"></Label>
+                <TextBlock Text="0" Name="fseats" TextAlignment="Center" Foreground="Black" Background="Red" Width="40" Height="22" Margin="0,5,30,0"></TextBlock>
+                <Label VerticalAlignment="Center" Foreground="White" Content="Reserved Seat:"></Label>
+                <TextBlock Text="0" Name="rseats" TextAlignment="Center" Foreground="Black" Background="SkyBlue" Width="40" Height="22" Margin="0,5,30,0"></TextBlock>
+            </WrapPanel>
+        </GroupBox>
+        <GroupBox Name="a1" Margin="750,10,70,10" Width="auto" Header="Ticket Operations" Foreground="White">
+            <StackPanel Margin="40,10,40,0">
+                <Label Margin="5" Content="Ticket Type" Foreground="White" HorizontalAlignment="Center"></Label>
+                <WrapPanel>
+                    <Label Margin="40,5,5,5" Content="Student" Foreground="White" HorizontalAlignment="Center"></Label>
+                    <Label Name="sprc" Margin="5" Width="auto" Content="0" Foreground="White"></Label>
+                    <Label Content=" $" Foreground="White" Margin="5"></Label>
+                </WrapPanel>
+
+                <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Button Name="sminus" Foreground="White" Background="Transparent" Content="-" Margin="5" Width="20" Height="20" Click="Sminus_Click"></Button>
+                    <TextBlock Text="0" TextAlignment="Center" Name="student" Margin="5" Width="70" Height="20"></TextBlock>
+                    <Button Name="splus" Foreground="White" Background="Transparent" Content="+" Margin="5" Width="20" Height="20" Click="Splus_Click"></Button>
+                </WrapPanel>
+                <WrapPanel>
+                    <Label Margin="30,5,5,5" Content="Full Ticket" Foreground="White" HorizontalAlignment="Center"></Label>
+                    <Label Name="fprc" Margin="5" Foreground="White" Content="0" Width="auto"></Label>
+                    <Label Margin="5" Content="$" Foreground="White"></Label>
+                </WrapPanel>
+                <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Button Name="fminus" Foreground="White" Background="Transparent" Content="-" Margin="5" Width="20" Height="20" Click="Fminus_Click"></Button>
+                    <TextBlock Text="0" TextAlignment="Center" Name="full" Margin="5" Width="70" Height="20"></TextBlock>
+                    <Button Name="fplus" Foreground="White" Background="Transparent" Content="+" Margin="5" Width="20" Height="20" Click="Fplus_Click"/>
+                </WrapPanel>
+                <Label Margin="2" Content="Date" Foreground="White" HorizontalAlignment="Center"></Label>
+                <DatePicker CalendarClosed="getdate_CalendarClosed" Name="getdate" Margin="2"></DatePicker>
+                <Label Margin="2" Content="Select Film" Foreground="White" HorizontalAlignment="Center"></Label>
+                <ComboBox Name="sfilm" Margin="2" DropDownClosed="sfilm_DropDownClosed"></ComboBox>
+                <Label Margin="2" Content="Session" Foreground="White" HorizontalAlignment="Center"></Label>
+                <ComboBox DropDownClosed="ssession_DropDownClosed" Name="ssession" Margin="2"></ComboBox>
+                <Label Margin="2" Content="Customer Information" Foreground="White" HorizontalAlignment="Center"></Label>
+                <TextBox Background="Transparent" MouseLeave="namec_MouseLeave" MouseEnter="namec_MouseEnter" Foreground="White" MaxLength="40" Name="namec" Text="Name" Margin="2"></TextBox>
+                <TextBox Background="Transparent" MouseEnter="surnamec_MouseEnter" MouseLeave="surnamec_MouseLeave" Foreground="White" Name="surnamec" MaxLength="40" Text="Surname" Margin="2"></TextBox>
+                <TextBox Background="Transparent" MouseEnter="citizenshipc_MouseEnter" MouseLeave="citizenshipc_MouseLeave" Foreground="White" MaxLength="11" Name="citizenshipc" PreviewTextInput="OnlyNumeric" Text="Citizenship Number" Margin="2"></TextBox>
+                <Label Content="Account" Foreground="White" HorizontalAlignment="Center"></Label>
+                <WrapPanel>
+                    <TextBlock Margin="85,0,0,0" Name="account" Text="0" Foreground="White"></TextBlock>
+                    <TextBlock Margin="10,0,0,0" Text="$"></TextBlock>
+                </WrapPanel>
+                <WrapPanel Width="auto">
+                    <Button Width="75" Height="20" Margin="2" Content="Buy Ticket" Background="Transparent" Foreground="White" Click="Button_Click"/>
+                    <Button Width="75" Background="Transparent" Foreground="White" HorizontalAlignment="Right" Content="Reservation" Height="20" Margin="5,0,0,0" Click="Button_Click_1"></Button>
+                </WrapPanel>
+            </StackPanel>
+        </GroupBox>
+        <Grid Visibility="Collapsed" Name="invoice" Width="300" Height="420">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Column="0" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Height="20" Name="tprocess" Margin="0,0,0,10"></TextBlock>
+            <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="7" Source="Resources/logoproje.png" Opacity="0.1"></Image>
+            <TextBlock Margin="0,10,0,0" Grid.Row="0" Grid.Column="0" Text="Asil Cinema Ticket" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="20"/>
+            <TextBlock Grid.Column="0" Text="Name: " Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="12" Margin="20,0,0,0"/>
+            <TextBlock Name="tname" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="12" Margin="60,0,0,0"/>
+            <TextBlock Grid.Column="0" Text="|" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="12" Margin="140,0,0,0"/>
+            <TextBlock Grid.Column="0" Text="Surname: " Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="12" Margin="145,0,0,0"/>
+            <TextBlock Name="tsurname" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="12" Margin="200,0,0,0"/>
+            <TextBlock Grid.Column="0" Text="Salon: " Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" Margin="25,10,0,0"/>
+            <TextBlock Name="tsalonnumber" Grid.Column="0" Text="11" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" Margin="55,10,0,0"/>
+            <TextBlock Grid.Column="0" Text="|" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" Margin="70,10,0,0"/>
+            <TextBlock Grid.Column="0" Text="Film Name: " Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" Margin="75,10,0,0"/>
+            <TextBlock Name="tfilmname" Grid.Column="0" Text="Selvi Boylum Al Yazmalım" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" Margin="135,10,0,0"/>
+            <TextBlock Grid.Column="0" Text="Film Date: " Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="12" Margin="20,0,0,10"/>
+            <TextBlock Name="tfilmdate" Grid.Column="0" Text="01.01.2018" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="12" Margin="75,0,0,10"/>
+            <TextBlock Grid.Column="0" Text="|" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="12" Margin="135,0,0,10"/>
+            <TextBlock Grid.Column="0" Text="Session: " Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="12" Margin="140,0,0,10"/>
+            <TextBlock Name="tfilmsession" Grid.Column="0" Text="15:00" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="12" Margin="185,0,0,10"/>
+            <TextBlock Grid.Column="0" Text="|" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" Margin="520,0,0,5"/>
+            <TextBlock Grid.Column="0" Text="Seat/s: " Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Margin="0,0,0,0"/>
+            <ListBox FontSize="13" Margin="10,5,10,5" Grid.Column="0" Grid.Row="4" Width="auto" Background="Transparent" BorderBrush="Transparent" Name="tseats" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Left">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Background="Transparent" IsItemsHost="True" />
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
+            <TextBlock Grid.Column="0" Text="Total Amount: " Grid.Row="5" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="80,5,0,0"/>
+            <TextBlock Name="taccount" Grid.Column="0" Grid.Row="5" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="180,5,0,0"/>
+            <TextBlock Grid.Column="0" Text="$" Grid.Row="5" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="210,5,0,0"/>
+            <TextBlock Name="tcan" Grid.Column="0" Text="Ticket Cancellation Code: " Grid.Row="5" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="13" Margin="10,0,0,5"/>
+            <TextBlock Name="tcancelcode" Grid.Column="0" Grid.Row="5" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="13" Margin="125,0,0,5"/>
+            <Button Name="ptrins" Grid.Column="0" Grid.Row="6" Width="100" Height="20" Margin="0,0,0,0" Background="Transparent" Foreground="White" Content="Print Ticket" Click="tprint_Click"></Button>
+        </Grid>
+    </Grid>
+</UserControl>

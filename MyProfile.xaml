@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="AsilCinemaTicketAutomation.MyProfile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AsilCinemaTicketAutomation"
+             mc:Ignorable="d" 
+             d:DesignHeight="564.4" d:DesignWidth="1092.8">
+    <Grid>
+        <GroupBox Header="User İnformation's" Foreground="White" Width="400" HorizontalAlignment="Left" Margin="21,25,0,44">
+            <StackPanel Height="auto" Margin="75,0">
+                <Label Margin="0,0,0,0" Content="Name" Foreground="White" HorizontalAlignment="Center"></Label>
+                <TextBox Background="Transparent" Foreground="White" Name="uname" IsEnabled="False" Margin="40,0,40,0"></TextBox>
+                <Label Margin="0,0,0,0" Content="Surname" Foreground="White" HorizontalAlignment="Center"></Label>
+                <TextBox Background="Transparent" Foreground="White" Name="usurname" Margin="40,0,40,0"></TextBox>
+                <Label Margin="0,0,0,0" Content="Citizenship Number" Foreground="White" HorizontalAlignment="Center"></Label>
+                <TextBox Background="Transparent" Foreground="White" Name="ucitizenship" IsEnabled="False" Margin="40,0,40,0"></TextBox>
+                <Label Margin="0,0,0,0" Content="Username" Foreground="White" HorizontalAlignment="Center"></Label>
+                <TextBox Background="Transparent" Foreground="White" Name="uusername" IsEnabled="False" Margin="40,0,40,0"></TextBox>
+                <Label  Margin="0,0,0,0" Content="Password" Foreground="White" HorizontalAlignment="Center"></Label>
+                <PasswordBox Background="Transparent" Foreground="White" Name="upassword" IsEnabled="False" Margin="40,0,40,0"></PasswordBox>
+                <Label Margin="0,0,0,0" Content="Location" Foreground="White" HorizontalAlignment="Center"></Label>
+                <TextBox Background="Transparent" Foreground="White" Name="ulocation" Margin="40,0,40,0"></TextBox>
+                <Label Margin="0,0,0,0" Content="User Type" Foreground="White" HorizontalAlignment="Center"></Label>
+                <TextBox Background="Transparent" Foreground="White" Name="utype" IsEnabled="False" Margin="40,0,40,0"></TextBox>
+                <Label Margin="0,0,0,0" Content="Phone" Foreground="White" HorizontalAlignment="Center"></Label>
+                <TextBox Background="Transparent" Foreground="White" Name="uphone" Margin="40,0,40,0"></TextBox>
+                <Label Margin="0,0,0,0" Content="Gender" Foreground="White" HorizontalAlignment="Center"></Label>
+                <TextBox Background="Transparent" Foreground="White" Name="ugender" IsEnabled="False" Margin="40,0,40,0"></TextBox>
+                <Label Margin="0,0,0,0" Content="Age" Foreground="White" HorizontalAlignment="Center"></Label>
+                <TextBox Background="Transparent" Foreground="White" Name="uage" IsEnabled="False" Margin="40,0,40,0"></TextBox>
+                <Button Name="updateui" Click="updateui_Click" Content="Update" Margin="40,10,40,10" Background="Transparent" Foreground="White"></Button>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Change Password" Foreground="White" Width="400" HorizontalAlignment="Left" Margin="500,25,0,425">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Foreground="White" Content="Enter New Password" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="20,0,0,0"></Label>
+                <Label Foreground="White" Content="Enter Password Again" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Margin="150,0,0,0"></Label>
+                <PasswordBox Background="Transparent" Foreground="White" Name="npass" Grid.Row="1" Grid.Column="0" Margin="35,15,30,15" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="90"></PasswordBox>
+                <PasswordBox Background="Transparent" Foreground="White" Name="npassa" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Left" Width="90" Margin="170,15,30,15"></PasswordBox>
+                <Button Name="updatep" Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" Margin="30" Background="Transparent" Content="Approve" Foreground="White" Click="updatep_Click"></Button>
+            </Grid>
+        </GroupBox>
+        <TextBlock Text="Profil Picture" Margin="55,0,0,200" Width="70" Height="18" Foreground="White" Background="Transparent"></TextBlock>
+        <Image Stretch="Fill" ToolTip="Only JPG and JPEG Format Photos." Name="upphoto" Width="150" Height="250" Margin="50,75,0,0"></Image>
+        <Button ToolTip="Only JPG Format Photos..!" Background="Transparent" Foreground="White" Width="70" Height="18" Margin="50,375,0,0" Content="Change" Name="changePhoto" Click="changePhoto_Click"></Button>
+    </Grid>
+</UserControl>

@@ -1,0 +1,78 @@
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\bin\Release\AsilCinemaTicketAutomation.exe.config
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\bin\Release\AsilCinemaTicketAutomation.exe
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\bin\Release\AsilCinemaTicketAutomation.pdb
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\AdminRegPan.g.cs
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\Authorization.g.cs
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\CutTicket.g.cs
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\EditSeats.g.cs
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\EnterTheVision.g.cs
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\FilmTransactions.g.cs
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\Home.g.cs
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\LoginPanel.g.cs
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\MainWindow.g.cs
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\MyProfile.g.cs
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\RegisterPanel.g.cs
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\TicketCancellation.g.cs
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\App.g.cs
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\AsilCinemaTicketAutomation_MarkupCompile.cache
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\AsilCinemaTicketAutomation_MarkupCompile.lref
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\AdminRegPan.baml
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\Authorization.baml
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\CutTicket.baml
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\EditSeats.baml
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\EnterTheVision.baml
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\FilmTransactions.baml
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\Home.baml
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\LoginPanel.baml
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\MainWindow.baml
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\MyProfile.baml
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\RegisterPanel.baml
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\TicketCancellation.baml
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\AsilCinemaTicketAutomation.g.resources
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\AsilCinemaTicketAutomation.Properties.Resources.resources
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\AsilCinemaTicketAutomation.csproj.GenerateResource.cache
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\AsilCinemaTicketAutomation.csproj.CoreCompileInputs.cache
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\AsilCinemaTicketAutomation.exe
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\AsilCinemaTicketAutomation.pdb
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\FeedBack.g.cs
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\FeedBack.baml
+C:\Users\oOoAsiLoOo\source\repos\AsilCinemaTicketAutomation\obj\Release\AsilCinemaTicketAutomation.csprojResolveAssemblyReference.cache
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\bin\Release\AsilCinemaTicketAutomation.exe.config
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\bin\Release\AsilCinemaTicketAutomation.exe
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\bin\Release\AsilCinemaTicketAutomation.pdb
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\AsilCinemaTicketAutomation.csprojAssemblyReference.cache
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\AdminRegPan.g.cs
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\Authorization.g.cs
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\CutTicket.g.cs
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\EditSeats.g.cs
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\EnterTheVision.g.cs
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\FeedBack.g.cs
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\FilmTransactions.g.cs
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\Home.g.cs
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\LoginPanel.g.cs
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\MainWindow.g.cs
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\MyProfile.g.cs
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\RegisterPanel.g.cs
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\TicketCancellation.g.cs
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\App.g.cs
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\AsilCinemaTicketAutomation_MarkupCompile.cache
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\AsilCinemaTicketAutomation_MarkupCompile.lref
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\AdminRegPan.baml
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\Authorization.baml
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\CutTicket.baml
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\EditSeats.baml
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\EnterTheVision.baml
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\FeedBack.baml
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\FilmTransactions.baml
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\Home.baml
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\LoginPanel.baml
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\MainWindow.baml
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\MyProfile.baml
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\RegisterPanel.baml
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\TicketCancellation.baml
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\AsilCinemaTicketAutomation.g.resources
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\AsilCinemaTicketAutomation.Properties.Resources.resources
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\AsilCinemaTicketAutomation.csproj.GenerateResource.cache
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\AsilCinemaTicketAutomation.csproj.CoreCompileInputs.cache
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\AsilCinemaTicketAutomation.exe
+C:\Users\oOoAsiLoOo\Desktop\GMYO Projeler\Sinema Bilet Otomasyonu\AsilCinemaTicketAutomation\obj\Release\AsilCinemaTicketAutomation.pdb

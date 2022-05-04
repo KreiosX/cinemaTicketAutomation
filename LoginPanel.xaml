@@ -1,0 +1,184 @@
+﻿<Window x:Class="AsilCinemaTicketAutomation.LoginPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AsilCinemaTicketAutomation"
+        mc:Ignorable="d"
+        Title="Login Panel" Height="614.4" Width="1092.4" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="Resources/asiltckt.ico">
+    <Window.Background>
+        <ImageBrush ImageSource="Resources\asil2.png"></ImageBrush>
+    </Window.Background>
+    <Window.Resources>
+        <Style x:Key="ComboBoxButtonStyle" TargetType="{x:Type ToggleButton}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                        <Border   
+             Background="White"   
+             x:Name="border"   
+             CornerRadius="0,5,5,0"   
+             BorderThickness="0,1,1,1"  
+             BorderBrush="LightGray">
+                            <ContentPresenter />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ComboBoxTextBoxStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <Border CornerRadius="10,10,10,10"  
+               BorderThickness="1,1,0,1"  
+               Background="{TemplateBinding Background}"  
+               BorderBrush="LightGray">
+                                <ScrollViewer x:Name="PART_ContentHost"/>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ComboBoxStyle" TargetType="{x:Type ComboBox}">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ComboBox}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition MaxWidth="18"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Name="PART_EditableTextBox"  
+                Style="{StaticResource ComboBoxTextBoxStyle}"  
+                Padding="5,0,0,0"  
+                Height="{TemplateBinding Height}"/>
+                            <ToggleButton Grid.Column="1" Margin="0"  
+               Height="{TemplateBinding Height}"  
+               Style="{StaticResource ComboBoxButtonStyle}"  
+               Focusable="False"  
+               IsChecked="{Binding Path=IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"  
+               ClickMode="Press">
+                                <Path Grid.Column="1"  
+                  HorizontalAlignment="Center"  
+                  VerticalAlignment="Center"  
+                  Data="M 0 0 L 4 4 L 8 0 Z"  
+                  Fill="DodgerBlue" />
+                            </ToggleButton>
+                            <ContentPresenter Name="ContentSite"  
+               Content="{TemplateBinding SelectionBoxItem}"  
+               ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"  
+               ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"  
+               VerticalAlignment="Center"  
+               HorizontalAlignment="Left"  
+               Margin="5,0,0,0"/>
+                            <Popup Name="Popup"  
+               Placement="Bottom"  
+               IsOpen="{TemplateBinding IsDropDownOpen}"  
+               AllowsTransparency="True"   
+               Focusable="False"  
+               PopupAnimation="Slide">
+                                <Grid Name="DropDown"  
+                 SnapsToDevicePixels="True"          
+                 MinWidth="{TemplateBinding ActualWidth}"  
+                 MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                    <Border   
+                   x:Name="DropDownBorder"  
+                   BorderThickness="1"  
+                   CornerRadius="10"  
+                   BorderBrush="LightGray"/>
+                                    <ScrollViewer Margin="4,6,4,6" SnapsToDevicePixels="True">
+                                        <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
+                                    </ScrollViewer>
+                                </Grid>
+                            </Popup>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="PasswordBox" x:Key="PBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="PasswordBox">
+                        <Border CornerRadius="10" x:Name="Bd" Background="White" BorderBrush="Gray" BorderThickness="1" OpacityMask="{x:Null}">
+                            <ScrollViewer SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" x:Name="PART_ContentHost" Template="{DynamicResource ScrollViewerControlTemplate1}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="Bd" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel Name="secu" Visibility="Visible">
+        </StackPanel>
+        <Rectangle Name="otomationi" Width="600" Height="250" Margin="0,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Resources/logoproje.png"></ImageBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Name="usernamei" Margin="0,-10,100,0" Width="15" Height="20">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Resources/user.png"></ImageBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Name="passwordi" Margin="0,49,100,0" Width="19" Height="15">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Resources\Unlock.png"></ImageBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBox Name="username" Height="22" Margin="15,-10,0,0" Width="90">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <PasswordBox Style="{StaticResource PBox}" Name="password" PasswordChar="-" Height="22" Margin="15,51,0,0" Width="90">
+            <PasswordBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </PasswordBox.Resources>
+        </PasswordBox>
+        <Button MouseLeave="lg_MouseLeave" MouseEnter="lg_MouseEnter" Name="lg" Foreground="DarkGray" Background="LightGray" BorderBrush="DarkGray" BorderThickness="1" Height="22" Margin="0,115,100,0" Width="75" Content="Login" Click="lg_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button MouseEnter="ge_MouseEnter" MouseLeave="ge_MouseLeave" Name="ge" Foreground="DarkGray" Background="LightGray" BorderBrush="DarkGray" BorderThickness="1" Height="22" Margin="100,115,0,0" Width="75" Content="Guest Entry" Click="ge_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button MouseEnter="rg_MouseEnter" MouseLeave="rg_MouseLeave" Name="rg" Foreground="DarkGray" Background="LightGray" BorderBrush="DarkGray" BorderThickness="1" Height="22" Width="75" Content="Register" Margin="0,175,0,0" Click="rg_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Name="TLoginPanel" MouseEnter="TLoginPanel_MouseEnter" MouseLeave="TLoginPanel_MouseLeave" Foreground="DarkGray" Background="LightGray" BorderBrush="DarkGray" BorderThickness="1" Height="22" Margin="0,275,650,0" Width="90" Content="I Have Account"  Visibility="Collapsed" Click="TLoginPanel_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <StackPanel Name="registerp" Visibility="Collapsed"></StackPanel>
+    </Grid>
+</Window>
