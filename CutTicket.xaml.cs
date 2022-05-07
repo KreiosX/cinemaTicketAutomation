@@ -27,7 +27,7 @@ namespace AsilCinemaTicketAutomation
     {
         double is3d = 0;
         double sprice, fprice;
-        private SqlConnection ActiveConnection = new SqlConnection("Server=79.123.228.28,5501;Database=Gunduz_HAcku;User Id=hacku;Password=x7a45tt55;");
+        private SqlConnection ActiveConnection = new SqlConnection("---");
         int studenty = 0;
         int fully = 0;
         public CutTicket()
