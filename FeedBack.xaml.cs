@@ -32,7 +32,7 @@ namespace AsilCinemaTicketAutomation
 
         private void FillTopic()
         {
-            SqlConnection ActiveConnection = new SqlConnection("Server=79.123.228.28,5501;Database=Gunduz_HAcku;User Id=hacku;Password=x7a45tt55;");
+            SqlConnection ActiveConnection = new SqlConnection("--");
             SqlDataAdapter da = new SqlDataAdapter("Select * FROM Feedback", ActiveConnection);
             DataSet ds = new DataSet();
             da.Fill(ds, "Feedback");
@@ -47,7 +47,7 @@ namespace AsilCinemaTicketAutomation
             if(topc.Text != "" && explanation.Text != "")
             {
                 SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
-                client.Credentials = new NetworkCredential("asilackux@gmail.com", "Xxbuwsd34");
+                client.Credentials = new NetworkCredential("asilackux@gmail.com", "--");
                 MailMessage msg = new MailMessage();
                 msg.To.Add(new MailAddress("ackuofficial@icloud.com"));
                 msg.From = new MailAddress("asilackux@gmail.com");
