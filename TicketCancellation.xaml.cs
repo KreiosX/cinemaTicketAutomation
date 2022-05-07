@@ -30,7 +30,7 @@ namespace AsilCinemaTicketAutomation
         DateTime MDate;
         string MSession;
         List<string> seatz = new List<string>();
-        SqlConnection ActiveConnection = new SqlConnection("Server=79.123.228.28,5501;Database=Gunduz_HAcku;User Id=hacku;Password = x7a45tt55;");
+        SqlConnection ActiveConnection = new SqlConnection("cs");
         public TicketCancellation()
         {
             InitializeComponent();
